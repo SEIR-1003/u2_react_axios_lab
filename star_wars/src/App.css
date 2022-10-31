@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+html{
+  background-color: darkgray;
+}
+.nav{
+  display: flex;
+  justify-content: space-around
+}
+.grid { 
+  display: flex;
+  
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: auto auto;
+}
