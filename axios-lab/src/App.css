@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ships {
+  list-style: none;
+  border: 3px solid black;
+}
+
+.planets {
+  list-style: none;
+  border: 3px solid black
+}
+
+.people {
+  list-style: none;
+  border: 3px solid black
+}
+
+.vehicles {
+  list-style: none;
+  border: 3px solid black
+}
+
+.species {
+  list-style: none;
+  border: 3px solid black
+}
+
+.films {
+  list-style: none;
+  border: 3px solid black
+}
