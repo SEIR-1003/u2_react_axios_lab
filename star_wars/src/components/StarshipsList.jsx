@@ -12,6 +12,7 @@ const StarshipsList = (props) => {
                 className='shipnames'>
         <h2 className="shipsTitle">{ship.name}</h2>
         <h4>Crew: {ship.crew}</h4>
+        <h4>Passengers: {ship.passengers}</h4>
 
         </div>
        ))

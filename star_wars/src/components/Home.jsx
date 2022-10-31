@@ -1,7 +1,7 @@
 export default function Home () {
     return (
         <div className="introRoll">
-        <h1 className="starwarsTitle"> STAR WARS</h1>
+        
         <h3 className="chapter">Chapter iv</h3>
         <h2 className="hope">A NEW HOPE</h2>
         <h3 className="par1">It is a period of civil war. Rebel spaceships, striing from a hidden base,have won their first victory against the evil Galactic Empire.</h3>

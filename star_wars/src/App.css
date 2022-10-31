@@ -11,8 +11,6 @@ html{
   
 }
 
-
-
 .grid { 
   display: grid;
   grid-template-columns: auto auto;
@@ -26,7 +24,7 @@ html{
   padding: 15px;
   background-color: rgba(140, 85, 213, 0.2);
   
-  color: white;
+  color: rgb(245, 245, 237);
 }
 
 .grid2{
@@ -74,3 +72,12 @@ html{
   font-family: 'Star Jedi', arial;
 }
 
+.home1, .star1, .plan1, .char1{
+  color: rgb(150, 91, 228);
+  
+  
+}
+
+.home1:hover, .star1:hover, .plan1:hover, .char1:hover{
+  color: yellow;
+}
