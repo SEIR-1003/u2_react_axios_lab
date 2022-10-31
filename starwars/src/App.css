@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+  border: 3px solid white;
+  background-color: black;
+  color: yellow;
+
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+  border: 3px solid white;
+  background-color: black;
+  color: yellow;
+
+}
+
+.grid3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+  border: 3px solid white;
+  background-color: black;
+  color: yellow;
+}
+
+h1{
+  font-size:100px;
+  color:aliceblue
+}
+
