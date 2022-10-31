@@ -1,4 +1,11 @@
 const CharacterList = (props) => {
+   
+    if(!props.characters) {
+        return <h2> Loading... Please wait.</h2>
+    } else {
+   
+   
+   
     return (
     <div className="grid2">
         {
@@ -14,6 +21,7 @@ const CharacterList = (props) => {
 }
        </div>
     )
+}
 }
 
 export default CharacterList

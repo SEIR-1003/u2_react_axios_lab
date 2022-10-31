@@ -1,4 +1,10 @@
 const PlanetList = (props) => {
+    
+    if(!props.planets) {
+        return <h2> Loading... Please wait.</h2>
+    } else {
+    
+    
     return (
     <div className="grid3">
         {
@@ -13,6 +19,7 @@ const PlanetList = (props) => {
 }
        </div>
     )
+}
 }
 
 export default PlanetList

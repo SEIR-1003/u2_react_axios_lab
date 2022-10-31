@@ -1,4 +1,9 @@
 const StarshipsList = (props) => {
+    
+    if(!props.starShips) {
+        return <h2> Loading... Please wait.</h2>
+    } else {
+    
     return (
     <div className="grid">
         {
@@ -13,6 +18,7 @@ const StarshipsList = (props) => {
 }
        </div>
     )
+}
 }
 
 export default StarshipsList
