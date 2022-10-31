@@ -1,0 +1,19 @@
+html {
+    background-image: url('https://i.pinimg.com/originals/16/27/b0/1627b044bca5e974e5362ffe98e8e34b.jpg');
+    background-size: cover;
+}
+
+.grid {
+    column-count: 2;
+    margin: 5px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card {
+    border: 2px solid black;
+    margin: 40px;
+    text-align: center;
+    background: rgba(200,100,300,.5)
+}
