@@ -28,8 +28,8 @@ const Planets = () => {
             {
                 planet.map((value)=> (
                     <div key={value.name}
-                        className="starship">
-                    <h3>Name: {value.name}</h3>
+                        className="planets">
+                    <h3>Planet: {value.name}</h3>
 
                     </div>
                 ))

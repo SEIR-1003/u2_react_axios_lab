@@ -10,5 +10,10 @@ export default function Nav () {
             <Link to= "/Planets">
                 <h2>Planets</h2>
             </Link>
+
+            <Link to= "/People">
+                <h2>People</h2>
+            </Link>
+
         </div>)
     }

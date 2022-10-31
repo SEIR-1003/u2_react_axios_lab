@@ -6,11 +6,11 @@ function App() {
 
     return (
       <div>
-        <div>
+        <div className="Navigation">
           <Nav/>
         </div>
       
-        <div>
+        <div className="Navigation">
           <Main/>
         </div>
 

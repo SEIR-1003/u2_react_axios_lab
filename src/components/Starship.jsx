@@ -31,7 +31,7 @@ const Starship = () => {
                 starship.map((value)=> (
                     <div key={value.created}
                         className="starship">
-                    <h3>Name: {value.name}</h3>
+                    <h3>Starship: {value.name}</h3>
 
                     </div>
                 ))
