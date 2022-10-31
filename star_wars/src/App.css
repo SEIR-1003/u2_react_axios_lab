@@ -6,9 +6,12 @@ html{
 }
 .nav{
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+  font-family: 'Star Jedi', arial;
   
 }
+
+
 
 .grid { 
   display: grid;
@@ -18,10 +21,10 @@ html{
   
 }
 .shipnames{
-  border: 1px solid rgb(2, 2, 2);
+  border: 1px solid rgb(150, 91, 228);
   margin: 15px;
   padding: 15px;
-  background-color: rgba(169, 169, 169, 0.2);
+  background-color: rgba(140, 85, 213, 0.2);
   
   color: white;
 }
@@ -71,6 +74,3 @@ html{
   font-family: 'Star Jedi', arial;
 }
 
-.nav{
-  font-family: 'Star Jedi', arial;
-}

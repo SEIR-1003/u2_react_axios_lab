@@ -12,7 +12,7 @@ const PlanetList = (props) => {
         <div key={planet.name}
                 className='shipnames'>
         <h2 className="planetName">{planet.name}</h2>
-        <h3>{planet.terrain}</h3>
+        <h3>Terrain: {planet.terrain}</h3>
 
         </div>
        ))

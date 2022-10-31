@@ -13,8 +13,8 @@ const CharacterList = (props) => {
         <div key={people.name}
                 className='shipnames'>
         <h2 className="peopleNames">{people.name}</h2>
-        <h3>{people.gender}</h3>
-        <h3>{people.birth_year}</h3>
+        <h3>Gender: {people.gender}</h3>
+        <h3>Birth Year:{people.birth_year}</h3>
     
         </div>
        ))
