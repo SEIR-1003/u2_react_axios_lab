@@ -23,8 +23,8 @@ html{
   margin: 15px;
   padding: 15px;
   background-color: rgba(140, 85, 213, 0.2);
-  
   color: rgb(245, 245, 237);
+  box-shadow: -5px 10px 15px rgb(150, 91, 228);
 }
 
 .grid2{
