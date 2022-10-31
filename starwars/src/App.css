@@ -1,0 +1,203 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  --tint1: 1,21,38;
+  --tint2: 2,56,89;
+  --tint3: 32,103,140;
+  --tint4:96,155,191;
+  --tint5:145,205,242;
+  background: linear-gradient(rgba(var(--tint1),0.75), rgba(var(--tint1),0.9)), url('https://free4kwallpapers.com/uploads/originals/2019/07/02/star-wars-wallpaper.jpg') no-repeat 50% 50% / cover, rgba(var(--tint1),1);
+}
+
+body{
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,0),rgba(0,0,0,.6));
+  min-height: 100vh;
+  padding: 0 8px 32px;
+}
+
+header{
+  text-align: center;
+  color: white;
+  padding-top: 32px;
+}
+
+header h1{
+  margin-bottom: 32px;
+}
+
+nav{
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: white;
+  gap: 8px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
+  margin-bottom: 32px;
+}
+nav ul a{
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 1;
+  padding: 8px;
+  background: rgba(255,255,255,0);
+  border-radius: 10px;
+  transition: all 1s ease;
+}
+nav ul .active{
+  background: rgba(255,255,255,1);
+  color: rgba(var(--tint1),1);
+}
+
+main{
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(var(--tint3),1);
+  box-shadow: 0 0 15px 10px rgba(var(--tint2),.5);
+  border-radius: 20px;
+  padding: 32px 16px;
+  background: rgba(var(--tint1),0);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+main h2{
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 4px solid rgba(var(--tint3));
+  width: 25%;
+  margin: 0 auto 32px;
+  min-width: 250px;
+}
+
+.homeContent{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.4;
+  animation: appear 1s ease forwards;
+}
+
+.homeContent p{
+  margin-bottom: 18px;
+}
+
+.homeContent a{
+  color: rgba(var(--tint5),1);
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(var(--tint5),0);
+  transition: all 1s ease;
+}
+
+.homeContent a:hover{
+  border-bottom: 2px solid rgba(var(--tint5),1);
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+@keyframes appear{
+  from{
+    max-height: 0vh;
+    padding: 0;
+    opacity: 0;
+  } to{
+    max-height: 100vh;
+    padding: 16px 8px;
+    opacity: 1;
+  }
+}
+
+.flex div{
+  max-height: 0vh;
+  opacity: 0;
+  overflow: hidden;
+  background: white;
+  color: rgba(var(--tint1),1);
+  padding: 16px 8px;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 10px;
+  animation: appear 1s ease forwards;
+}
+
+.flex div h3{
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(var(--tint3),1);
+  margin-bottom: 8px;
+  color: rgba(var(--tint3),1)
+}
+
+.flex strong{
+  color: rgba(var(--tint2),1)
+}
+
+.loading{
+  text-align: center;
+}
+
+.loading h4{
+  margin-bottom: 32px;
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  } to{
+    transform: rotate(360deg);
+  }
+}
+
+.spinner{
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(rgba(var(--tint5),1), rgba(var(--tint5),0));
+  position: relative;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 32px;
+}
+
+.spinner:after{
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(var(--tint1),1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 20px;
+  top: 20px;
+}
+
+@media screen and (max-width: 965px){
+  .flex div{
+    min-width: 49%;
+    max-width: 49%;
+  }
+}
+@media screen and (max-width: 600px){
+  .flex div{
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
