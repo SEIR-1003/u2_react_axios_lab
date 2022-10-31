@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg');
+}
+
+.home-main{
+color: yellow;
+}
+
+a:link { text-decoration: none;
+          color: yellow; }
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+}
+
+.list{
+  border: 2px solid yellow;
+  border-radius: 20px;
+  color: yellow;
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: yellow
+}
+
+header{
+  color: yellow;
+}
+.component-header{
+  color: yellow;
+}
