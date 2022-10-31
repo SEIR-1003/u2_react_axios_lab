@@ -5,7 +5,7 @@ const StarshipsList = (props) => {
        props.starShips.map((ship) => (
         <div key={ship.name}
                 className='shipnames'>
-        <h3>{ship.name}</h3>
+        <h2 className="shipsTitle">{ship.name}</h2>
         <h4>Crew: {ship.crew}</h4>
 
         </div>

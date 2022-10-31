@@ -2,18 +2,64 @@
   text-align: center;
 }
 html{
-  background-color: darkgray;
+  background-image: url(https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg);
 }
 .nav{
   display: flex;
   justify-content: space-around
 }
 .grid { 
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-image: url(https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg);
   
+  
+}
+.shipnames{
+  border: 1px solid rgb(2, 2, 2);
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(169, 169, 169, 0.2);
+  
+  color: white;
 }
 
 .grid2{
   display: grid;
   grid-template-columns: auto auto;
+  
+}
+
+.shipsTitle {
+  text-decoration: underline;
+}
+
+.header{
+  color: yellow;
+  
+  
+}
+
+.introRoll {
+  color: yellow;
+  margin: 100px;
+  padding: 20px;
+  
+}
+
+.par1, .par2, .par3 {
+  margin-top: 35px;
+}
+
+.grid3{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.planetName{
+  text-decoration: underline;
+}
+
+.peopleNames{
+  text-decoration: underline;
 }

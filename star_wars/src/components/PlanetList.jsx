@@ -5,7 +5,8 @@ const PlanetList = (props) => {
        props.planets.map((planet) => (
         <div key={planet.name}
                 className='shipnames'>
-        <h3>{planet.name}</h3>
+        <h2 className="planetName">{planet.name}</h2>
+        <h3>{planet.terrain}</h3>
 
         </div>
        ))

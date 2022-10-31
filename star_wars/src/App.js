@@ -2,12 +2,9 @@ import './App.css';
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from './globals'
-import StarshipsList from './components/StarshipsList';
 import Landing from './components/Landing';
 import Header from './components/Header';
-import Nav from './components/Nav';
-import CharacterList from './components/CharacterList';
-import PlanetList from './components/PlanetList';
+
 
 
 function App() {
