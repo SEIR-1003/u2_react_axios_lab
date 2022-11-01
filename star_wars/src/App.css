@@ -81,3 +81,19 @@ html{
 .home1:hover, .star1:hover, .plan1:hover, .char1:hover{
   color: yellow;
 }
+
+.shipsIDclass{
+  color: white;
+}
+.shipsIDclass:hover{
+  color: yellow;
+}
+.testhi{
+  color: azure;
+}
+.shipDetailsColor{
+  color: aliceblue;
+}
+.testingh3{
+  color: white;
+}

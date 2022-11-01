@@ -1,5 +1,14 @@
+import { useNavigate } from 'react-router-dom'
+
 const StarshipsList = (props) => {
     
+    let navigate = useNavigate()
+
+    const showShip = (index) => {
+        navigate(`${index}`)
+    }
+
+
     if(!props.starShips) {
         return <h2> Loading... Please wait.</h2>
     } else {
@@ -7,13 +16,12 @@ const StarshipsList = (props) => {
     return (
     <div className="grid">
         {
-       props.starShips.map((ship) => (
-        <div key={ship.name}
+       props.starShips.map((ship, index) => (
+        
+        <div key={index}
                 className='shipnames'>
-        <h2 className="shipsTitle">{ship.name}</h2>
-        <h4>Crew: {ship.crew}</h4>
-        <h4>Passengers: {ship.passengers}</h4>
-
+        <h2 className="shipsTitle" onClick={() => showShip(index)}>{ship.name}</h2>
+        
         </div>
        ))
 }
