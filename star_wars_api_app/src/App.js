@@ -6,7 +6,8 @@ import './App.css';
 import Planets from './components/Planets'
 import Characters from './components/Characters'
 import Nav from './components/Nav'
-import { Link } from 'react-router-dom'
+import CharacterDets from './components/CharacterDets';
+import StarshipDets from './components/StarshipDets'
 
 function App() {
 
@@ -46,7 +47,9 @@ function App() {
     
     <Routes>
       <Route exact path="/Characters" element={<Characters characters={characters}/>}/>
+      <Route path="/Characters/:index" element={<CharacterDets characters={characters}/>}/>
       <Route exact path="/StarshipsList" element={<StarshipsList starships={starships}/>}/>
+      <Route path="/StarshipsList/:index" element={<StarshipDets starships={starships}/>}/>
       <Route exact path="/Planets" element={<Planets planets={planets}/>}/>
     </Routes>
     </div>
