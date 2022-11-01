@@ -27,6 +27,11 @@ html{
   box-shadow: -5px 10px 15px rgb(150, 91, 228);
 }
 
+.shipsTitle:hover{
+  cursor: pointer;
+  color: yellow;
+}
+
 .grid2{
   display: grid;
   grid-template-columns: auto auto;

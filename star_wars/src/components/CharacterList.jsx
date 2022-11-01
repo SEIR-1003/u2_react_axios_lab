@@ -1,5 +1,15 @@
+import { useNavigate } from 'react-router-dom'
+
 const CharacterList = (props) => {
    
+    let navigate = useNavigate()
+
+    const showCharacter = (index) => {
+        navigate(`${index}`)
+    }
+
+
+
     if(!props.characters) {
         return <h2> Loading... Please wait.</h2>
     } else {
@@ -9,12 +19,11 @@ const CharacterList = (props) => {
     return (
     <div className="grid2">
         {
-       props.characters.map((people) => (
+       props.characters.map((people, index) => (
         <div key={people.name}
                 className='shipnames'>
-        <h2 className="peopleNames">{people.name}</h2>
-        <h3>Gender: {people.gender}</h3>
-        <h3>Birth Year:{people.birth_year}</h3>
+        <h2 className="peopleNames" onClick={() => showCharacter(index)}>{people.name}</h2>
+      
     
         </div>
        ))

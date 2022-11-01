@@ -9,7 +9,7 @@ export default function Nav () {
 
 
             <Link to='/StarshipsList'>
-                <h2 className='star1'>StarshipsList</h2>
+                <h2 className='star1'>Starships</h2>
             </Link>
 
 
