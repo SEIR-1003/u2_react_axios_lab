@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner {
+  background-color: black;
+  color: goldenrod;
+  font-size: xx-large;
+  padding-top: 10px;
+}
+
+.nav {
+  background-color: grey;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: gray;
+  width: 40%;
+  margin: 10px;
+  border-radius: 10%;
+  color: black
+}
+
+.home {
+  padding-bottom: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.home {
+  color: black;
+  background: linear-gradient(to bottom, transparent, 40%, black),
+  url("https://assets2.cbsnewsstatic.com/hub/i/r/2015/12/12/b7f92767-0d2d-4b01-9241-6f50ed56f0aa/thumbnail/1200x630/1ac5839ba92afc05a26d429c0a395fe1/star-wars-poster-a.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.starships-list {
+  color: black;
+  background: linear-gradient(to bottom, transparent, 20%, black),
+  url("https://www.wallpaperflare.com/static/493/506/493/fantasy-art-star-wars-x-wing-science-fiction-wallpaper.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.planets-list {
+  color: black;
+  background: linear-gradient(to bottom, transparent, 20%, black),
+  url("https://preview.redd.it/c1wdlu53v9o61.jpg?auto=webp&s=4dd6dce8942aaa9de6b06e91fc50a18492ad5b93");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.characters-list {
+  color: black;
+  background: linear-gradient(to bottom, transparent, 20%, black),
+    url("https://www.cnet.com/a/img/resize/2eb13289e05529a58f59823c7164b3d0ae17b80c/hub/2021/11/12/fd97266d-1740-44b0-b15a-dbc8452eb655/screenshot-2021-11-12-at-16-45-36.png?auto=webp&width=1200");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
