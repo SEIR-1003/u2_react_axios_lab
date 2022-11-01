@@ -102,3 +102,30 @@ html{
 .testingh3{
   color: white;
 }
+
+.shipContainer{
+  border: 1px solid rgb(150, 91, 228);
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(140, 85, 213, 0.2);
+  box-shadow: -5px 10px 15px rgb(150, 91, 228);
+}
+.shipCon1{
+  color: yellow;
+}
+.planetName:hover{
+  cursor: pointer;
+  color: yellow;
+
+}
+.planCon1{
+  color: yellow;
+}
+
+.peopleNames:hover{
+  cursor: pointer;
+  color: yellow;
+}
+.charCon1{
+  color: yellow;
+}

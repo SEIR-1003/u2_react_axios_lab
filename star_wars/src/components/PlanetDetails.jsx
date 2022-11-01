@@ -13,11 +13,11 @@ const PlanetDetails = (props) => {
     }, [props.planets, index])
     return planetDetail ? (
         <div className='shipContainer'>
-            <h3 className='testingh3'>Name: {planetDetail.name}</h3>
-            <h3 className='testingh3'>Pop: {planetDetail.population}</h3>
-            <h3 className='testingh3'>Terrain: {planetDetail.terrain}</h3>
-            <h3 className='testingh3'>Terrain: {planetDetail.rotation_period}</h3>
-            <h3 className='testingh3'>Terrain: {planetDetail.orbital_period}</h3>
+            <h3 className='planCon1'>Name: {planetDetail.name}</h3>
+            <h3 className='planCon1'>Pop: {planetDetail.population}</h3>
+            <h3 className='planCon1'>Terrain: {planetDetail.terrain}</h3>
+            <h3 className='planCon1'>Terrain: {planetDetail.rotation_period}</h3>
+            <h3 className='planCon1'>Terrain: {planetDetail.orbital_period}</h3>
             
         </div>
     ) : (<h1>Loading...</h1>)
