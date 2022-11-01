@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing:border-box
+}
+
+body {
+  margin: 0;
+}
+
+.nav {
+  background-color: rgb(6, 181, 244);
+  color: rgb(11, 134, 206);
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  padding: 1rem;
+  margin:  1rem;
+  list-style: none;
+  gap: 1rem;
+
+}
