@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react'
 
 
 export default function StarShipList() {
+
+  let navigate = useNavigate() 
+
+  const showShip = (ships) => {
+    navigate(`${ships.name}`)
+  }
+
     const [starships, setStarships] = useState([])
 
   useEffect(() => {
