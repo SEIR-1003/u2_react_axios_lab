@@ -2,6 +2,7 @@
 
 export default function StarshipsList (props) {
     return (
+        (props.starships) ?
         <div className="starships-list">
             <h2>Starships</h2>
             <div className="list">
@@ -15,5 +16,7 @@ export default function StarshipsList (props) {
             ))}
             </div>
         </div>
+        :
+        <h2 className="loading">Loading...</h2>
     )
 }

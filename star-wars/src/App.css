@@ -12,14 +12,14 @@
 }
 
 .banner {
-  background-color: black;
+  background-image: url("https://cdn.pixabay.com/photo/2017/05/08/08/35/star-field-2294797_1280.jpg");
   color: goldenrod;
   font-size: xx-large;
   padding-top: 10px;
 }
 
 .nav {
-  background-color: grey;
+  background-color: slategray;
 }
 
 .list {
@@ -29,7 +29,7 @@
 }
 
 .card {
-  background-color: gray;
+  background-color: slategray;
   width: 40%;
   margin: 10px;
   border-radius: 10%;

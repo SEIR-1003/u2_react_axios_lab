@@ -1,6 +1,7 @@
 
 export default function PlanetsList (props) {
     return (
+        (props.planets) ? 
         <div className="planets-list">
             <h2>Planets</h2>
             <div className="list">
@@ -13,5 +14,7 @@ export default function PlanetsList (props) {
             ))}
             </div>
         </div>
+        :
+        <h2 className="loading">Loading...</h2>
     )
 }

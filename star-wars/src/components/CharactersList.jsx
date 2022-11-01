@@ -4,6 +4,7 @@ import axios from "axios"
 export default function CharactersList (props) {
 
     return (
+        (props.characters) ?
         <div className="characters-list">
             <h2>Characters</h2>
             <div className="list">
@@ -15,5 +16,7 @@ export default function CharactersList (props) {
             ))}
             </div>
         </div>
+        :
+        <h2 className="loading">Loading...</h2>
     )
 }
