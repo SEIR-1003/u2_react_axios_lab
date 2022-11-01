@@ -1,14 +1,15 @@
 import axios from "axios"
 import { BASE_URL } from "../globals"
 import { useState, useEffect } from 'react'
+import { useNavigate } from "react-router-dom"
 
 
 export default function StarShipList() {
 
   let navigate = useNavigate() 
 
-  const showShip = (ships) => {
-    navigate(`${ships.name}`)
+  const showShip = (starships) => {
+    navigate(`${starships.name}`)
   }
 
     const [starships, setStarships] = useState([])
@@ -34,7 +35,8 @@ export default function StarShipList() {
                 {
                     starships.map((starship) => (
                         <ul key={starship.name}
-                            className="list">
+                            className="list"
+                            onClick={() => showShip(starships)}>
                         <h1> {starship.name} </h1>
                         <h2> model: {starship.model} </h2>
                         <h2> class: {starship.starship_class} </h2>
