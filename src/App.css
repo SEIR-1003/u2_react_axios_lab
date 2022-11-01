@@ -7,6 +7,14 @@ html {
   
 }
 
+.four {
+  color: white;
+}
+
+.ships-detail {
+  color: white;
+}
+
 .logo:hover {
   scale: 105%;
   transition: all 0.2s ease;
@@ -29,6 +37,8 @@ html {
   background-color: #7fa5c6;
   color: black;
   text-shadow: 2px 2px 3px rgb(77, 75, 75);
+  border-width: 10px;
+  border-color: red;
 }
 
 .card:hover {

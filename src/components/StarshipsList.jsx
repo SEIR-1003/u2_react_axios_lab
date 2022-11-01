@@ -1,21 +1,28 @@
 import { useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const StarshipsList = () => {
+const StarshipsList = (props) => {
 
-    const [starships, setStarships] = useState([])
-  
-    useEffect(() => {
-      const getShips = async () => {
-        const response = await axios.get('https://swapi.dev/api/starships')
-        console.log(response.data.results)
-        setStarships(response.data.results)
-      }
-  
-      getShips()
-    }, [])
+    let navigate = useNavigate()
 
-    if(!starships) {
+    const showShip = (starships) => {
+    navigate(`${starships.name}`)
+  }
+
+    // const [starships, setStarships] = useState([])
+  
+    // useEffect(() => {
+    //   const getShips = async () => {
+    //     const response = await axios.get('https://swapi.dev/api/starships')
+    //     console.log(response.data.results)
+    //     setStarships(response.data.results)
+    //   }
+  
+    //   getShips()
+    // }, [])
+
+    if(!props.starships) {
         return <h2> Loading Please Wait</h2>
     } else {
 
@@ -23,10 +30,11 @@ const StarshipsList = () => {
 
         <div className="grid">
             {
-                starships.map((starship) => (
+                props.starships.map((starship) => (
                     <div key={starship.name}
-                        className='card'>
-                    
+                        className='card'
+                        onClick={() => showShip(starship)}>
+                        
                         <h3> {starship.name}</h3>
                         <h3> Manufacturer: {starship.manufacturer}</h3>
                         <h3> Passengers: {starship.passengers}</h3>

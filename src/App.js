@@ -1,6 +1,5 @@
-// import StarshipsList from './components/StarshipsList'
-// import Planets from './components/Planets';
-// import Films from './components/Films'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import Main from './components/Main';
 import './App.css';
 
@@ -8,19 +7,22 @@ import './App.css';
 
 function App() {
 
+  const [starships, setStarships] = useState([])
+  
+    useEffect(() => {
+      const getShips = async () => {
+        const response = await axios.get('https://swapi.dev/api/starships')
+        console.log(response.data.results)
+        setStarships(response.data.results)
+      }
+  
+      getShips()
+    }, [])
+
   return (
     <div className="App">
-      
-      {/* <Navbar /> */}
-
-      
-      {/* <StarshipsList />
-      
-      <Planets />
-
-      <Films /> */}
-
-      <Main />
+     
+      <Main starships={starships}/>
 
     </div>
   );
