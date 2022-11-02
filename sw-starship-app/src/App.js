@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Starships from './components/Starships'
 import Characters from './components/Characters'
 import Planets from './components/Planets'
+import StarshipDetails from './components/StarshipDetails'
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         <Route exact path='starships' element={<Starships starships={starships}/>} />
         <Route exact path='characters' element={<Characters characters={characters}/>} />
         <Route exact path='planets' element={<Planets planets={planets}/>} />
+        <Route path='starships/:name' element={<StarshipDetails starships={starships}/>} />
       </Routes>
     </div>
   );
