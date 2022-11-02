@@ -8,8 +8,9 @@ export default function StarShipList() {
 
   let navigate = useNavigate() 
 
-  const showShip = (starships) => {
-    navigate(`${starships.name}`)
+  const showShip = (starships, i) => {
+    navigate(`${starships[i].name}`)
+    console.log(starships)
   }
 
     const [starships, setStarships] = useState([])
@@ -33,10 +34,10 @@ export default function StarShipList() {
             <h1> star ships </h1>
         <div className="grid">
                 {
-                    starships.map((starship) => (
+                    starships.map((starship, i) => (
                         <ul key={starship.name}
                             className="list"
-                            onClick={() => showShip(starships)}>
+                            onClick={() => showShip(starships, i)}>
                         <h1> {starship.name} </h1>
                         <h2> model: {starship.model} </h2>
                         <h2> class: {starship.starship_class} </h2>

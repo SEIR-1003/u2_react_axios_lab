@@ -3,43 +3,36 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../globals";
 
-export default function ShipDetails(props) {
+export default function ShipDetails () {
 
-    let { index } = useParams() 
+let {name} = useParams()
+console.log(name)
+const [shipId, setShipId] = useState('')
 
-    const [ships, setShips] = useState([])
-    const [shipIndex, setShipIndex] = useState ('')
+useEffect(() => {
+  const getShips = async () => {
+    const response = await axios.get(`${BASE_URL}`)
+    console.log(response.data.results)
+    setShipId(response.data.results)
+  
+  let selectedShip = response.data.results.find(
+    shipId => shipId.name === name
+  )
+    setShipId(selectedShip)
 
-//this pulls the array from the api 
-    useEffect(() => {
-        const getShips = async () => {
-            const response = await axios.get(`${BASE_URL}`)
-            setShips(response.data.results)
-            console.log(response.data.results)
-        }
-        getShips()
-    }, [])
-// this SHOULD set the ships.name to name variable
-    useEffect(() => {
-        let selectedShip = ships.find(
-            (ships) => ships.index === parseInt(index)
-            
-        )
-          setShipIndex(selectedShip)
-          console.log(selectedShip)
-    }, [props.shipIndex, index])
-
-    return ships ? (
-        <div className="detail">
-          <div className="detail-header">
-            <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-              <h1>{ships.name}</h1>
-            </div> 
-            <p>{ships.manufacturer}</p>
-          </div>
-        </div>
-      ) : null;
-    }
-    
+    console.log(selectedShip)
+  }
+  getShips()
+  // make sure to add the brackets otherwise it loops infintely
+}, [])
 
 
+  return  shipId ?  (
+    <div className="ship-details">
+    <h1>{shipId.name}</h1>
+    <h2> manufacturer: {shipId.manufacturer}</h2>
+    <h2> hyperdrive Rating: {shipId.hyperdrive_rating} </h2>
+    <h2> M.A.S: {shipId.max_atmosphering_speed}</h2>
+    </div>
+  ): null;
+}

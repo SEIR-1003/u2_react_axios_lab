@@ -1,8 +1,18 @@
 import axios from "axios"
 import { BASE_URL_PLANETS } from "../globals"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Planets() {
+
+let navigate = useNavigate()
+
+const showPlanet = (planets, i) =>{
+    console.log(planets[i].name)
+    navigate(`${planets[i].name}`)
+}
+
+
     const [planets, setPlanets] = useState([])
 
     useEffect(() => {
@@ -22,8 +32,9 @@ export default function Planets() {
 
         <div className="grid">
         {
-            planets.map((planet) => (
-                <ul className="list">
+            planets.map((planet, i) => (
+                <ul className="list"
+                    onClick={() => showPlanet(planets, i)}>
                     <h1> {planet.name} </h1>
                     <h2> climate: {planet.climate} </h2>
                     <h2> rotation period: {planet.rotation_period} </h2>

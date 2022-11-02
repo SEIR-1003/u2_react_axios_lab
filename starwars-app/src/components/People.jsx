@@ -1,8 +1,17 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { BASE_URL_PEOPLE } from "../globals"
 
 export default function People() {
+
+let navigate = useNavigate()
+
+const showPeople = (peoples, i) => {
+    console.log(peoples[i].name)
+    navigate(`${peoples[i].name}`)
+}
+
 const [peoples, setPeople] = useState([])
 
 useEffect(() => {
@@ -13,6 +22,7 @@ useEffect(() => {
     }
     getPeople()
 }, [])
+
     return (
         <div className="People-main">
             <div className="component-header">
@@ -21,8 +31,9 @@ useEffect(() => {
 
              <div className="grid">
                 {
-                    peoples.map((people) => (
-                        <ul className="list">
+                    peoples.map((people, i) => (
+                        <ul className="list"
+                            onClick={() => showPeople(peoples, i)}>
                             <h1>{people.name} </h1>
                             <h2>height: {people.height}</h2>
                             <h2>mass: {people.mass}</h2>
