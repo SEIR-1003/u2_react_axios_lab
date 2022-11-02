@@ -48,16 +48,29 @@ html{
   
 }
 
+
+
+ @keyframes slide {
+  0%   { 
+  transform: translateY(200%); 		
+  }
+  100% { 
+  transform: translateY(0%); 
+  }
+ }
+
 .introRoll {
   color: yellow;
-  margin: 100px;
+  margin: 50px;
   padding: 20px;
   font-family: 'Star Jedi', arial;
+  animation: slide 10s ease-out;
   
 }
 
 .par1, .par2, .par3 {
   margin-top: 35px;
+  animation: slide 10s ease-out;
 }
 
 .grid3{
