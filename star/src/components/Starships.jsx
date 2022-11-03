@@ -1,21 +1,21 @@
-
 import { useNavigate } from 'react-router-dom'
-import shipData from "../data/ShipData.json"
+
 
 const ShipList = (props) => {
 
     let navigate = useNavigate()
 
     const showShip = (ship) => {
-        navigate(`${ship.results.id}`)
+        navigate(`${ship.name}`)
     }
 
     return(
         <div className="ship-grid">
             {
-                shipData.results.map((ship) => (
-                    <div className="ship-card" onClick ={() => showShip(ship)} key={ship.results.id}>
-                    <h3>{ship.results.name}</h3>
+                props.ships.map((ship) => (
+                    <div className="ship-card" onClick ={() => showShip(ship)} key={ship.name}>
+                    <h3>{ship.name}</h3>
+                    <button>Ship Info</button>
                     </div>
                 ))
             }
