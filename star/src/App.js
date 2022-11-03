@@ -1,3 +1,4 @@
+import ShipDetails from './components/ShipDetails'
 import ShipList from './components/Starships'
 import './App.css'
 import Nav from "./components/Nav"
@@ -9,6 +10,11 @@ import axios from 'axios'
  
 
 const App = () => {
+
+  const[name,setShipDetails] = useState([])
+
+
+
 
   const [ships, setStarships] = useState ([])
 
@@ -24,6 +30,7 @@ const App = () => {
   return (
       <div>
         <ShipList ships={ships} />
+        <ShipDetails ships={name} />
       </div>
 
   );
