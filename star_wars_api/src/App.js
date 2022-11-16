@@ -14,7 +14,7 @@ import Starship from './components/Starship';
 function App() {
 
   const [starShips, setStarShips] = useState(null)
-  // const [planets, setPlanets] = useState(null)
+  const [planets, setPlanets] = useState(null)
   // const [vehicles, setVehicles] = useState(null)
   // const [films, setFilms] = useState(null)
   // const [people, setPeople] = useState(null)
@@ -32,8 +32,8 @@ useEffect(() =>{
     <div className="App">
   
     <Routes>
-      {/* <Route path="/planets" element={<Planets planets={planets}/>}/>
-      <Route path="/vehicles" element={<Vehicles vehicles={vehicles}/>}/>
+      <Route path="/planets" element={<Planets planets={planets}/>}/>
+      {/* <Route path="/vehicles" element={<Vehicles vehicles={vehicles}/>}/>
       <Route path="/films" element={<Films films={films}/>}/>
       <Route path="/people" element={<People people={people}/>}/> */}
       <Route path='/starships' element={<StarshipList starShips={starShips}/>}/>

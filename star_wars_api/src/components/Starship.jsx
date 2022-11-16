@@ -15,6 +15,8 @@ useEffect(() => {
 return (
     <div className='shipDetails'>
         <p>{starship?.name}</p>
+        <p>{starship?.manufacturer}</p>
+        
     </div>
 )
 

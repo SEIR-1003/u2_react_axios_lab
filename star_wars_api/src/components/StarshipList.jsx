@@ -16,9 +16,7 @@ const showShip = (ship) =>{
             <div className='detail-header'>
             {props.starShips?.map((ship, name)  =>(
                 <li>
-                    <span>name{ship.name}</span>
-                    <span>model{}</span>
-                    <span>manufacturer{}</span>
+                    <span>name {ship.name}</span><pre></pre>
                     <button onClick={()=>showShip(ship)}>Details</button>
                 </li>
 
