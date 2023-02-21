@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Star Wars";
+  src: url(./assets/fonts/star_jedi/starjedi/Starjedi.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "Star Wars Hollow";
+  src: url(./assets/fonts/star_jedi/starjedi/Starjhol.ttf) format(truetype);
+}
+
+body {
+  background-color: #000000;
+}
+
+nav {
+  margin-top: 65px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-family: "Star Wars", sans-serif;
+  color: goldenrod;
+}
+
+.active-link {
+  color: whitesmoke;
+}
+
+.non-active-link {
+  color: goldenrod;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+.landing {
+  text-align: center;
+  font-family: "Star Wars Hollow", sans-serif;
+  font-size: 10rem;
+  font-weight: 400;
+  color: goldenrod;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+}
+
+.card {
+  border-radius: 4px;
+  box-shadow: 2px 3px 10px rgba(218, 165, 32, 0.6);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #3a3a3a;
+}
+
+.card button {
+  border-radius: 0 0 4px 4px;
+}
+
+.card img {
+  border-radius: 4px 4px 0 0;
+}
+
+.card,
+.content {
+  color: #e0e0e0;
+}
+
+.main-data {
+}
+
+.sub-data {
+}
