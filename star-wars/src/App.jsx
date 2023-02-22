@@ -22,7 +22,23 @@ function App() {
   useEffect(() => {
     const getStarShips = async () => {
       const response = await axios.get(`${BASE_URL}/starships/`);
+      // let allResults = [];
+      // let hasRespNext = true;
+      // let pageCounter = 0;
+      // while (hasRespNext) {
+      //   pageCounter++;
+      //   const response = await axios.get(
+      //     `${BASE_URL}/starships/?page=${pageCounter}`
+      //   );
+      //   allResults.unshift(response.data.results);
+      //   console.log(allResults);
+      //   if (response.data.next === null || response.data.next === "") {
+      //     hasRespNext = false;
+      //   }
+      //   console.log(hasRespNext);
+      // }
       // console.log(response.data.next); // EXPERIMENTS!
+      // setStarShips(allResults);
       setStarShips(response.data.results);
     };
     getStarShips();
