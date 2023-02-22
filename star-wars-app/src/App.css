@@ -75,3 +75,7 @@ a:hover {
     text-underline-offset: 0.5rem;
     color: var(--md-sys-color-on-background);
 }
+
+.video-container {
+    margin-top: 2rem;
+}
