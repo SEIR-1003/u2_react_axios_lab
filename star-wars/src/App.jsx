@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
 import StarshipsList from "./components/StarshipsList";
+import StarshipPage from "./components/StarshipPage";
 import CharactersList from "./components/CharactersList";
 import Landing from "./components/Landing";
 import PlanetsList from "./components/PlanetsList";
@@ -8,7 +9,7 @@ import VehiclesList from "./components/VehiclesList";
 import SpeciesList from "./components/SpeciesList";
 import FilmsList from "./components/FilmsList";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { all } from "axios";
 import { BASE_URL } from "../src/globals";
 
 function App() {
@@ -22,23 +23,6 @@ function App() {
   useEffect(() => {
     const getStarShips = async () => {
       const response = await axios.get(`${BASE_URL}/starships/`);
-      // let allResults = [];
-      // let hasRespNext = true;
-      // let pageCounter = 0;
-      // while (hasRespNext) {
-      //   pageCounter++;
-      //   const response = await axios.get(
-      //     `${BASE_URL}/starships/?page=${pageCounter}`
-      //   );
-      //   allResults.unshift(response.data.results);
-      //   console.log(allResults);
-      //   if (response.data.next === null || response.data.next === "") {
-      //     hasRespNext = false;
-      //   }
-      //   console.log(hasRespNext);
-      // }
-      // console.log(response.data.next); // EXPERIMENTS!
-      // setStarShips(allResults);
       setStarShips(response.data.results);
     };
     getStarShips();
@@ -149,8 +133,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />}></Route>
           <Route
-            path="starships"
+            path="/starships"
             element={<StarshipsList starships={starShips} />}
+          />
+          <Route
+            path="/starships/:id"
+            element={<StarshipPage starships={starShips} />}
           />
           <Route path="planets" element={<PlanetsList planets={planets} />} />
           <Route

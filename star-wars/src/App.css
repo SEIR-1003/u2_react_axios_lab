@@ -78,6 +78,7 @@ span {
 }
 
 .card,
+.details-card,
 .content {
   color: #e0e0e0;
 }
@@ -91,6 +92,27 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 0.1em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.details-card {
+  border-radius: 4px;
+  box-shadow: 2px 3px 10px rgba(218, 165, 32, 0.6);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #3a3a3a;
 }
 
 /* ID'S */

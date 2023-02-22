@@ -1,12 +1,18 @@
+import { useNavigate } from "react-router-dom";
+
 const StarshipsList = (props) => {
+  let navigate = useNavigate();
+  const showStarShip = (index) => {
+    navigate(`${index}`);
+  };
   return (
     <div className="grid">
-      {props.starships.map((starship) => (
-        <div key={starship.created} className="card">
+      {props.starships.map((starship, index) => (
+        <div key={index} className="card" onClick={() => showStarShip(index)}>
           <p className="main-data">
-            <span>name:</span> {starship.name}
+            <span>starship name:</span> {starship.name}
           </p>
-          <p className="sub-data">
+          {/* <p className="sub-data">
             <span>model:</span> {starship.model}
           </p>
           <p className="sub-data">
@@ -14,7 +20,7 @@ const StarshipsList = (props) => {
           </p>
           <p className="sub-data">
             <span>passengers:</span> {starship.passengers}
-          </p>
+          </p> */}
         </div>
       ))}
     </div>
