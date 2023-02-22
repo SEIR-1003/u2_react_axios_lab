@@ -1,24 +1,34 @@
+@import url(../src/css/tokens.css);
+@import url(../src/css/colors.module.css);
+@import url(../src/css/typography.module.css);
+@import url(../src/css/theme.light.css) (prefers-color-scheme: light);
+@import url(../src/css/theme.dark.css) (prefers-color-scheme: dark);
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--md-sys-color-surface-variant);
+}
+
 .App {
-    /* padding: 2rem 0; */
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: top;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f8f8;
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 span {
     font-size: 0.6rem;
     text-transform: uppercase;
-    color: grey;
+    color: var(--md-sys-color-outline);
 }
 
 .grid {
@@ -29,7 +39,7 @@ span {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--md-sys-color-surface);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
@@ -50,4 +60,18 @@ nav {
     align-items: center;
     flex-direction: row;
     gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    transition: text-decoration 450ms ease-in-out;
+    color: var(--md-sys-color-on-background);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.5rem;
+    color: var(--md-sys-color-on-background);
 }
