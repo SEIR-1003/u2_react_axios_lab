@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
 import StarshipsList from "./components/StarshipsList";
-import PeopleList from "./components/PeopleList";
+import CharactersList from "./components/CharactersList";
 import Landing from "./components/Landing";
 import PlanetsList from "./components/PlanetsList";
 import VehiclesList from "./components/VehiclesList";
@@ -13,7 +13,7 @@ import { BASE_URL } from "../src/globals";
 
 function App() {
   const [starShips, setStarShips] = useState([]);
-  const [people, setPeople] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [planets, setPlanets] = useState([]);
   const [films, setFilms] = useState([]);
   const [species, setSpecies] = useState([]);
@@ -22,17 +22,18 @@ function App() {
   useEffect(() => {
     const getStarShips = async () => {
       const response = await axios.get(`${BASE_URL}/starships/`);
+      // console.log(response.data.next); // EXPERIMENTS!
       setStarShips(response.data.results);
     };
     getStarShips();
   }, []);
 
   useEffect(() => {
-    const getPeople = async () => {
+    const getCharacters = async () => {
       const response = await axios.get(`${BASE_URL}/people/`);
-      setPeople(response.data.results);
+      setCharacters(response.data.results);
     };
-    getPeople();
+    getCharacters();
   }, []);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ function App() {
     <div children="App">
       <nav>
         <NavLink
-          to="/home"
+          to="/"
           className={({ isActive }) =>
             isActive ? "active-link" : "non-active-link"
           }
@@ -95,12 +96,12 @@ function App() {
           Planets
         </NavLink>
         <NavLink
-          to="/people"
+          to="/characters"
           className={({ isActive }) =>
             isActive ? "active-link" : "non-active-link"
           }
         >
-          People
+          Characters
         </NavLink>
         <NavLink
           to="/films"
@@ -130,13 +131,16 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/home" element={<Landing />}></Route>
+          <Route path="/" element={<Landing />}></Route>
           <Route
             path="starships"
             element={<StarshipsList starships={starShips} />}
           />
           <Route path="planets" element={<PlanetsList planets={planets} />} />
-          <Route path="people" element={<PeopleList people={people} />} />
+          <Route
+            path="characters"
+            element={<CharactersList characters={characters} />}
+          />
           <Route path="films" element={<FilmsList films={films} />} />
           <Route path="species" element={<SpeciesList species={species} />} />
           <Route

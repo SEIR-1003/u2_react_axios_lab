@@ -1,3 +1,5 @@
+/* IMPORTS */
+
 @font-face {
   font-family: "Star Wars";
   src: url(./assets/fonts/star_jedi/starjedi/Starjedi.ttf) format(truetype);
@@ -7,6 +9,8 @@
   font-family: "Star Wars Hollow";
   src: url(./assets/fonts/star_jedi/starjedi/Starjhol.ttf) format(truetype);
 }
+
+/* ELEMENTS */
 
 body {
   background-color: #000000;
@@ -38,9 +42,7 @@ span {
   text-transform: uppercase;
 }
 
-/* .App {
-  text-align: center;
-} */
+/* CLASSES */
 
 .landing {
   text-align: center;
@@ -81,7 +83,18 @@ span {
 }
 
 .main-data {
+  color: goldenrod;
 }
 
+.main-data,
 .sub-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* ID'S */
+
+/* KEYFRAMES */
+
+/* MEDIA QUERIES */
