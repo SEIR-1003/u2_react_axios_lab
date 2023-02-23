@@ -40,7 +40,7 @@ const PlanetDetails = (props) => {
       <Link to="/planets"><button>Planet</button></Link>
     </div>
   ) : (
-    <h1>Planet detail not found!</h1>
+    <h1>404</h1>
   );
 };
 

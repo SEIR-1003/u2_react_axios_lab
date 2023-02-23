@@ -40,7 +40,7 @@ const VehicleDetails = (props) => {
       <Link to="/vehicles"><button>Vehicles</button></Link>
     </div>
   ) : (
-    <h1>vehicle detail not found!</h1>
+    <h1>404</h1>
   );
 };
 

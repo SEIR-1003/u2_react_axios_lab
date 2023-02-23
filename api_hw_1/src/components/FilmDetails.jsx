@@ -42,7 +42,7 @@ const FilmDetails = (props) => {
       <Link to="/films"><button>Film</button></Link>
     </div>
   ) : (
-    <h1>Film detail not found!</h1>
+    <h1>404</h1>
   );
 };
 

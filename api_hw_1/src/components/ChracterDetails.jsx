@@ -38,7 +38,7 @@ const CharacterDetails = (props) => {
       <Link to="/characters"><button>Characters</button></Link>
     </div>
   ) : (
-    <h1>Character detail not found!</h1>
+    <h1>404</h1>
   );
 };
 

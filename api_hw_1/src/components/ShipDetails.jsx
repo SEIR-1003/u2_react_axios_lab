@@ -41,7 +41,7 @@ const ShipDetails = (props) => {
       <Link to="/starshipslist"><button>Starships List</button></Link>
     </div>
   ) : (
-    <h1>Ship detail not found!</h1>
+    <h1>404</h1>
   );
 };
 
