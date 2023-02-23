@@ -25,6 +25,10 @@ body {
     color: var(--md-sys-color-on-surface-variant);
 }
 
+.logo {
+    width: 8rem;
+}
+
 span {
     font-size: 0.6rem;
     text-transform: uppercase;
@@ -51,7 +55,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .link-container {
@@ -78,4 +82,32 @@ a:hover {
 
 .video-container {
     margin-top: 2rem;
+}
+
+.details-container {
+    margin-top: 2rem;
+    width: 40rem;
+    padding: 2rem;
+    background-color: var(--md-sys-color-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    grid-gap: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5rem;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    text-decoration: none;
 }
