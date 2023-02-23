@@ -1,11 +1,14 @@
 import "./App.css";
-import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import StarshipsList from "./components/StarshipsList";
 import StarshipPage from "./components/StarshipPage";
 import CharactersList from "./components/CharactersList";
+import CharacterPage from "./components/CharacterPage";
 import Landing from "./components/Landing";
 import PlanetsList from "./components/PlanetsList";
+import PlanetPage from "./components/PlanetPage";
 import VehiclesList from "./components/VehiclesList";
+import VehiclePage from "./components/VehiclePage";
 import SpeciesList from "./components/SpeciesList";
 import FilmsList from "./components/FilmsList";
 import { useState, useEffect } from "react";
@@ -140,16 +143,28 @@ function App() {
             path="/starships/:id"
             element={<StarshipPage starships={starShips} />}
           />
-          <Route path="planets" element={<PlanetsList planets={planets} />} />
+          <Route path="/planets" element={<PlanetsList planets={planets} />} />
           <Route
-            path="characters"
+            path="/planets/:id"
+            element={<PlanetPage planets={planets} />}
+          />
+          <Route
+            path="/characters"
             element={<CharactersList characters={characters} />}
           />
-          <Route path="films" element={<FilmsList films={films} />} />
-          <Route path="species" element={<SpeciesList species={species} />} />
           <Route
-            path="vehicles"
+            path="/characters/:id"
+            element={<CharacterPage characters={characters} />}
+          />
+          <Route path="/films" element={<FilmsList films={films} />} />
+          <Route path="/species" element={<SpeciesList species={species} />} />
+          <Route
+            path="/vehicles"
             element={<VehiclesList vehicles={vehicles} />}
+          />
+          <Route
+            path="/vehicles/:id"
+            element={<VehiclePage vehicles={vehicles} />}
           />
         </Routes>
       </main>

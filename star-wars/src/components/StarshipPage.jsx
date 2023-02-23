@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const StarshipPage = (props) => {
   const [starShip, setStarShip] = useState("");
@@ -46,12 +46,6 @@ const StarshipPage = (props) => {
           <span>consumables:</span> {starShip.consumables}
         </p>
         <p className="sub-data">
-          <span>hyperdrive rating:</span> {starShip.hyperdrive_rating}
-        </p>
-        <p className="sub-data">
-          <span>MGLT:</span> {starShip.MGLT}
-        </p>
-        <p className="sub-data">
           <span>starship class:</span> {starShip.starship_class}
         </p>
         <p className="sub-data">
@@ -60,15 +54,11 @@ const StarshipPage = (props) => {
         <p className="sub-data">
           <span>films:</span> {starShip.films}
         </p>
-        <p className="sub-data">
-          <span>created:</span> {starShip.created}
-        </p>
-        <p className="sub-data">
-          <span>edited:</span> {starShip.edited}
-        </p>
-        <p className="sub-data">
-          <span>url:</span> {starShip.url}
-        </p>
+      </div>
+      <div>
+        <button>
+          <Link to="/starships">Back to Starships</Link>
+        </button>
       </div>
     </div>
   ) : (
