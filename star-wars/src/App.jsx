@@ -11,6 +11,7 @@ import VehiclesList from "./components/VehiclesList";
 import VehiclePage from "./components/VehiclePage";
 import SpeciesList from "./components/SpeciesList";
 import FilmsList from "./components/FilmsList";
+import FilmPage from "./components/FilmPage";
 import { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { BASE_URL } from "../src/globals";
@@ -157,6 +158,7 @@ function App() {
             element={<CharacterPage characters={characters} />}
           />
           <Route path="/films" element={<FilmsList films={films} />} />
+          <Route path="/films/:id" element={<FilmPage films={films} />} />
           <Route path="/species" element={<SpeciesList species={species} />} />
           <Route
             path="/vehicles"
