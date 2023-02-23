@@ -9,6 +9,8 @@ export default function Navbar() {
                     <li><Link id="link" to="/starshipslist">StarshipsList</Link></li>
                     <li><Link id="link" to="/planets">Planets</Link></li>
                     <li><Link id="link" to="/characters">Characters</Link></li>
+                    <li><Link id="link" to="/vehicles">Vehicles</Link></li>
+                    <li><Link id="link" to="/films">Films</Link></li>
                 </ul>
             </nav>
         </div>

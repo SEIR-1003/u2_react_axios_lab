@@ -1,6 +1,14 @@
+
+
 export default function StarshipsList(props) {
+
+
+
   return (
-    props.getShips
+    <div>
+        {props.getShips}
+    </div>
+    
   );
 }
 

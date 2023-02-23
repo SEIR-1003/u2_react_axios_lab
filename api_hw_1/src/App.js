@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { BASE_URL } from "./globals";
+import { BASE_URL, BASE_URL_VEHICLE } from "./globals";
 import Navbar from './components/Navbar'
 import Main from "./components/Main";
 
@@ -13,6 +13,12 @@ function App() {
   const [planets, setPlanets] = useState([]);
   //characters
   const [characters, setCharacters] = useState([]);
+
+  //vehicles
+  const [vehicles, setVehicles] = useState([]);
+
+  //films
+  const [films, setFilms] = useState([]);
 
   useEffect(() => {
     //starships
@@ -42,6 +48,24 @@ function App() {
 
     getCharacters()
 
+     //vehicles
+    const getVehicles = async () => {
+    const response = await axios.get(`${BASE_URL}vehicles`)
+    console.log("VEHICLE RESPONSE: " +response.data.results)
+    setVehicles(response.data.results)
+  }
+
+  getVehicles()
+
+   //films
+   const getFilms = async () => {
+    const response = await axios.get(`${BASE_URL}films`)
+    console.log("FILMS RESPONSE: " +response.data.results)
+    setFilms(response.data.results)
+  }
+
+  getFilms()
+
   }, [])
 
 
@@ -49,7 +73,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar/>
-        <Main starShips={starShips} planets={planets} characters={characters}/>
+        <Main starShips={starShips} planets={planets} characters={characters} vehicles={vehicles} films={films}/>
       </header>
     </div>
   );
