@@ -8,7 +8,6 @@ const PlanetPage = (props) => {
   useEffect(() => {
     let selectedPlanet = props.planets[id];
     setPlanet(selectedPlanet);
-    console.log(planet);
   }, []);
 
   return planet ? (

@@ -12,15 +12,6 @@ const StarshipsList = (props) => {
           <p className="main-data">
             <span>starship name:</span> {starship.name}
           </p>
-          {/* <p className="sub-data">
-            <span>model:</span> {starship.model}
-          </p>
-          <p className="sub-data">
-            <span>manufacturer:</span> {starship.manufacturer}
-          </p>
-          <p className="sub-data">
-            <span>passengers:</span> {starship.passengers}
-          </p> */}
         </div>
       ))}
     </div>

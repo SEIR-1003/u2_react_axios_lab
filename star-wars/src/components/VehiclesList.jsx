@@ -16,15 +16,6 @@ const VehiclesList = (props) => {
           <p className="main-data">
             <span>name:</span> {vehicle.name}
           </p>
-          {/* <p className="sub-data">
-            <span>model:</span> {vehicle.model}
-          </p>
-          <p className="sub-data">
-            <span>crew:</span> {vehicle.crew}
-          </p>
-          <p className="sub-data">
-            <span>cargo capacity:</span> {vehicle.capacity}
-          </p> */}
         </div>
       ))}
     </div>

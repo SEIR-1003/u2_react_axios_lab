@@ -16,15 +16,6 @@ const FilmsList = (props) => {
           <p className="main-data">
             <span>title:</span> {film.title}
           </p>
-          {/* <p className="sub-data">
-            <span>opening crawl:</span> {film.opening_crawl}
-          </p>
-          <p className="sub-data">
-            <span>director:</span> {film.director}
-          </p>
-          <p className="sub-data">
-            <span>release date:</span> {film.release_date}
-          </p> */}
         </div>
       ))}
     </div>

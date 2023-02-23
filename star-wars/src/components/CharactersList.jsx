@@ -16,15 +16,6 @@ const CharactersList = (props) => {
           <p className="main-data">
             <span>name:</span> {character.name}
           </p>
-          {/* <p className="sub-data">
-            <span>height:</span> {character.height}
-          </p>
-          <p className="sub-data">
-            <span>mass:</span> {character.mass}
-          </p>
-          <p className="sub-data">
-            <span>gender:</span> {character.gender}
-          </p> */}
         </div>
       ))}
     </div>

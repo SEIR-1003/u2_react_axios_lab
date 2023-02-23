@@ -8,7 +8,6 @@ const StarshipPage = (props) => {
   useEffect(() => {
     let selectedStarShip = props.starships[id];
     setStarShip(selectedStarShip);
-    console.log(starShip);
   }, []);
 
   return starShip ? (
